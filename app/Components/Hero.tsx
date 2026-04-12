@@ -4,12 +4,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
-// ─── Character data ──────────────────────────────────────────────────────────
-// Add / edit entries here to configure each cartoon character on screen.
-// position: Tailwind classes for absolute positioning
-// size:     Tailwind classes for width / height of the hit-area
-// tooltip:  what shows in the hover card
-// link:     where clicking navigates
 const characters = [
   {
     id: "ghost",
@@ -143,7 +137,7 @@ function CharacterSpot({
       <div
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className={`absolute ${position} ${zIndex} ${size} cursor-pointer`}
+        className={`absolute ${position} ${zIndex} ${size} cursor-pointer border`}
       >
         {/* Tooltip card */}
         <div
