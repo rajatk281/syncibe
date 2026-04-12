@@ -3,7 +3,7 @@ import { motion, Variants } from "framer-motion"
 
 const Loader = () => {
   const revealVariants: Variants = {
-    hidden: { clipPath: "inset(0 100% 0 0)" }, 
+    hidden: { clipPath: "inset(0 100% 0 0)" },
     visible: {
       clipPath: "inset(0 0% 0 0)", 
       transition: {
