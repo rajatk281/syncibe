@@ -8,7 +8,7 @@ const Loader = () => {
       clipPath: "inset(0 0% 0 0)", 
       transition: {
         delay: 0.2, 
-        duration: 3,
+        duration: 3.2,
         ease: "easeInOut"
       }
     }
@@ -17,7 +17,7 @@ const Loader = () => {
   return (<>
     <motion.div initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.6 }} className='relative flex justify-center items-center h-screen overflow-hidden bg-gradient-to-r from-purple-600 to-pink-300'>
+          transition={{ duration: 1 }} className='relative flex justify-center items-center h-screen overflow-hidden bg-gradient-to-r from-purple-600 to-pink-300'>
 
       <div className="absolute inset-0 z-10 pointer-events-none">
         <video 
