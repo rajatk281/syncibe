@@ -32,7 +32,7 @@ const Loader = () => {
 
       {/* Animated Text Layer */}
       <motion.div 
-        className="absolute z-0 text-8xl font-poppins font-bold text-white tracking-tight left-105"
+        className="absolute z-0 text-8xl font-poppins font-bold text-white tracking-tight left-110"
         variants={revealVariants}
         initial="hidden"
         animate="visible"
