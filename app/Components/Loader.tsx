@@ -1,7 +1,6 @@
 "use client"
 import { motion, Variants } from "framer-motion"
 
-
 const Loader = () => {
   const revealVariants: Variants = {
     hidden: { clipPath: "inset(0 100% 0 0)" }, 
