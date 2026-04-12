@@ -7,13 +7,13 @@ const Loader = () => {
     visible: {
       clipPath: "inset(0 0% 0 0)", 
       transition: {
-        delay: 0.2, 
+        delay: 0, 
         duration: 3.6,
         ease: "easeInOut"
       }
     }
   };
-
+0
   return (<>
     <motion.div initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
