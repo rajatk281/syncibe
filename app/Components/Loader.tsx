@@ -15,7 +15,9 @@ const Loader = () => {
   };
 
   return (<>
-    <div className='relative flex justify-center items-center h-screen overflow-hidden bg-gradient-to-r from-purple-600 to-pink-300'>
+    <motion.div initial={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.6 }} className='relative flex justify-center items-center h-screen overflow-hidden bg-gradient-to-r from-purple-600 to-pink-300'>
 
       <div className="absolute inset-0 z-10 pointer-events-none">
         <video 
@@ -38,7 +40,7 @@ const Loader = () => {
         Synibe
       </motion.div>
       
-    </div>
+    </motion.div>
     </>
   )
 }

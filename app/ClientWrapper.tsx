@@ -1,19 +1,12 @@
-// app/ClientWrapper.tsx
 "use client";
 
 import { useEffect, useState } from "react";
 import Loader from "./Components/Loader";
-// import QuestionScreen from "./Components/QuestionScreen";
 
-type ScreenState = "question" | "loading" | "app";
+type ScreenState = "loading" | "app";
 
-export default function ClientWrapper({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function ClientWrapper({children}: { children: React.ReactNode;}) {
   const [screen, setScreen] = useState<ScreenState>("loading");
-
   // When loading starts → auto move to app
   useEffect(() => {
     if (screen === "loading") {
@@ -27,10 +20,6 @@ export default function ClientWrapper({
 
   return (
     <>
-      {/* {screen === "question" && (
-        <QuestionScreen onContinue={() => setScreen("loading")} />
-      )} */}
-
       {screen === "loading" && <Loader />}
 
       {screen === "app" && (
