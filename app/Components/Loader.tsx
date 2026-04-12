@@ -8,7 +8,7 @@ const Loader = () => {
       clipPath: "inset(0 0% 0 0)", 
       transition: {
         delay: 0, 
-        duration: 3.2,
+        duration: 3,
         ease: "easeInOut"
       }
     }
