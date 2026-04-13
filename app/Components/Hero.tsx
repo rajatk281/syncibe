@@ -118,7 +118,6 @@ const characters = [
     zIndex: "z-20",
   },
 ];
-// ─────────────────────────────────────────────────────────────────────────────
 
 function CharacterSpot({
   label,
@@ -132,12 +131,17 @@ function CharacterSpot({
 }: (typeof characters)[number]) {
   const [hovered, setHovered] = useState(false);
 
+  const scrollToSection = (id : string) => {
+  const element = document.getElementById(id);
+  element?.scrollIntoView({ behavior: "smooth" });
+};
+
   return (
     <Link href={link}>
       <div
         onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        className={`absolute ${position} ${zIndex} ${size} cursor-pointer border`}
+        onMouseLeave={() => setHovered(false)}  
+        className={`absolute ${position} ${zIndex} ${size} cursor-pointer`}
       >
         {/* Tooltip card */}
         <div
@@ -178,10 +182,10 @@ export default function Hero() {
       initial={{ opacity: 0, y: -80 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="flex flex-col h-screen w-screen overflow-hidden"
+      className="flex flex-col h-screen w-screen overflow-hidden bottom-0 left-0 "
     >
       <video
-        className="bg-gradient-to-r from-purple-600 to-pink-300 relative inset-0"
+        className="bg-gradient-to-r from-purple-600 to-pink-300 relative inset-0 "
         src="/models/group.webm"
         autoPlay
         muted

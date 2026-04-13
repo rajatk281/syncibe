@@ -1,11 +1,15 @@
-import Hero from './Components/Hero'
+"use client";
+import Hero from "./Components/Hero";
+import { useRef } from "react";
+import Features from "./Components/Features";
 
-const page = () => {
+export default function Page() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   return (
-    <div className='min-h-screen'>
-      <Hero/>
+    <div className="">
+        <Hero />
+        <Features/>
     </div>
-  )
+  );
 }
-
-export default page
